@@ -12,7 +12,7 @@ using UnityEngine.UIElements;
 [RequireComponent(typeof(CharacterController))]
 public class Effects : MonoBehaviour
 {
-    public float Agravity = 9.8f;
+    public float Gravity = 9.8f;
     private Vector3 displacement;
     private CharacterController CharacterController;
      
@@ -28,7 +28,7 @@ public class Effects : MonoBehaviour
     {
         if (!CharacterController.isGrounded)
         {
-            displacement.y -= Agravity * Time.deltaTime;
+            displacement.y -= Gravity * Time.deltaTime;
         }
        
         CharacterController.Move(displacement * Time.deltaTime);
